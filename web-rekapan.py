@@ -14,6 +14,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     df["Nomer Telepon"] = df["Nomer Telepon"].replace(",", "")
     df = df.astype(str)
+    df
     tanggal = st.text_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
     tombol = st.button("Cari Data")
