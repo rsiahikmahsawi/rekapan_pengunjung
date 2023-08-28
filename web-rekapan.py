@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file:
     st.markdown('---')
     df = pd.read_csv(uploaded_file)
-    df["Nomer Telepon"] = df["Nomer Telepon"].replace(",", "")
+    df["Nomer Telepon"] = df["Nomer Telepon"].st.write(angka)
     df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].replace(",", "")
     df
     tanggal = st.text_input(
