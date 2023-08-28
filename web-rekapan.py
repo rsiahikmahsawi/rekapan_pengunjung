@@ -20,6 +20,6 @@ if uploaded_file:
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
     tombol = st.button("Cari Data")
     if tombol:
-        df_new = df[df['Pilih Tanggal Rencana Kunjungan '] ==t anggal]
+        df_new = df[df['Pilih Tanggal Rencana Kunjungan '] == tanggal]
         df_new
         download = st.button("Download")
