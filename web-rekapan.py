@@ -14,7 +14,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     df["Nomer Telepon"] = df["Nomer Telepon"].apply(lambda x: str(x))
     df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].apply(lambda x: str(x))
-    df
+    df = st.dataframe(df)
     tanggal = st.text_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
     tombol = st.button("Cari Data")
