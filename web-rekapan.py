@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file:
     st.markdown('---')
     df = pd.read_csv(uploaded_file)
-    df
+    df["Nomer Telepon"] = df["Nomer Telepon"].replace(",", "")
     df = df.astype(str)
     tanggal = st.text_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
