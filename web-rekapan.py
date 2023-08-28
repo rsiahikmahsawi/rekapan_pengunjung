@@ -13,7 +13,7 @@ if uploaded_file:
     st.markdown('---')
     df = pd.read_csv(uploaded_file)
     df["Nomer Telepon"] = df["Nomer Telepon"].apply(lambda x: str(x))
-    df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].apply(lambda x: str(x))
+    # df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].apply(lambda x: str(x))
     df
     tanggal = st.text_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
