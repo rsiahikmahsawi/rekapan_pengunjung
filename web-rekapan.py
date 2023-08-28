@@ -16,9 +16,11 @@ if uploaded_file:
     df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].apply(lambda x: str(x))
     df['Masukkan Nomer Rekam Medis Jika Peserta Lama'] = df['Masukkan Nomer Rekam Medis Jika Peserta Lama'].astype(str).str.replace('.0', '')
     df
+    st.markdown('---')
     tanggal=st.text_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
     tombol = st.button("Cari Data")
+    st.markdown('---')
     if tombol:
         df_new = df[df['Pilih Tanggal Rencana Kunjungan '] == tanggal]
         df_new
