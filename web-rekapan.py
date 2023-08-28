@@ -23,5 +23,8 @@ if uploaded_file:
     st.markdown('---')
     if tombol:
         df_new = df[df['Pilih Tanggal Rencana Kunjungan '] == tanggal]
+        new_column_names = ['Waktu Registrasi',
+                            'Nama Pasien', 'Poli', 'No.Telp', 'Tanggal Kunjungan', 'Peserta L/B', 'J.Peserta', 'T.Pemeriksaan', 'No RM']
+        df_new.columns = new_column_names
+        df_new = df_new.drop(columns="Waktu Registrasi")
         df_new
-        download = st.button("Download")
