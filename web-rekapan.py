@@ -16,7 +16,7 @@ if uploaded_file:
     df["Masukkan Nomer Rekam Medis Jika Peserta Lama"] = df["Masukkan Nomer Rekam Medis Jika Peserta Lama"].replace(",", "")
     df = df.astype(str)
     df
-    tanggal = st.text_input(
+    tanggal = st.date_input(
         "Masukkan Tanggal Yang Ingin dicari (Tahun-Bulan-Tangaal)")
     tombol = st.button("Cari Data")
     if tombol:
